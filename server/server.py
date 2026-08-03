@@ -3,6 +3,8 @@ import util
 
 app = Flask(__name__)
 
+util.load_saved_artifacts()
+
 @app.route('/get_location_names', methods=['GET'])
 def get_location_names():
     response = jsonify({
